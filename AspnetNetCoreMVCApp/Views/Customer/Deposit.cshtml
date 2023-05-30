@@ -1,0 +1,20 @@
+﻿
+@model DepositDto
+@{
+    ViewData["Title"] = "Deposit";
+}
+
+
+<form method="post" asp-controller="Customer" asp-action="Deposit">
+  <div asp-validation-summary="All"></div>
+
+  <input class="form-control" asp-for="AccountNumber" placeholder="Hesap No" />
+  <span asp-validation-for="AccountNumber"></span>
+
+  <input class="form-control" asp-for="Amount" placeholder="Miktar" />
+  <span asp-validation-for="Amount"></span>
+
+
+  <input class="btn btn-danger" type="submit" value="Para Çekme" />
+
+</form>

@@ -1,0 +1,30 @@
+﻿
+@*@using AspnetNetCoreMVCApp.Models*@
+@model AccountCreateDto
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+
+<!--Html helper yerine tag helpers yapısı geldi. -->
+<!-- asp-antiforgery="true" default da true -->
+<form method="post" asp-controller="Customer" asp-action="Create" >
+  <div asp-validation-summary="All"></div>
+
+  <input class="form-control" asp-for="AccountNumber" placeholder="Account Number" />
+  <span asp-validation-for="AccountNumber"></span>
+
+@*  @Html.TextBoxFor(c=> c.AccountNumber)*@
+
+@*  @using (@Html.BeginForm("Create","Customer",FormMethod.Post))
+  {
+    
+  }*@
+
+  <input class="btn btn-success" type="submit" value="Ekle" />
+ 
+</form>
+

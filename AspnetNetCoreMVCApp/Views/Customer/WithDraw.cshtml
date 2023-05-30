@@ -1,0 +1,19 @@
+﻿@model WithDrawDto
+@{
+    ViewData["Title"] = "WithDraw";
+}
+
+
+<form method="post" asp-controller="Customer" asp-action="WithDraw">
+  <div asp-validation-summary="All"></div>
+
+  <input class="form-control" asp-for="AccountNumber" placeholder="Hesap No" />
+  <span asp-validation-for="AccountNumber"></span>
+
+  <input class="form-control" asp-for="Amount" placeholder="Miktar" />
+  <span asp-validation-for="Amount"></span>
+
+
+  <input class="btn btn-success" type="submit" value="Para Yatırma" />
+
+</form>
